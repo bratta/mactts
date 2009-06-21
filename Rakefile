@@ -2,7 +2,7 @@ require 'rubygems'
 require 'rake'
 require 'echoe'
 
-Echoe.new('mactts', '0.1.0') do |p|
+Echoe.new('mactts', '0.1.1') do |p|
   p.description    = "Ruby wrapper around the Mac OS X say command"
   p.url            = "http://github.com/bratta/mactts"
   p.author         = "Tim Gourley"
