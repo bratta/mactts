@@ -30,27 +30,27 @@ describe Mac::TTS, "When using an instantiated object" do
   end
   
   it "should say default text" do
-    @mactts.speak(@sample_text).should == true
+    @mactts.say(@sample_text).should == true
   end
   
   it "should say default text as alex" do
     @mactts.voice = :alex
-    @mactts.speak(@sample_text).should == true
+    @mactts.say(@sample_text).should == true
   end
   
   it "should raise an error when an invalid voice is specified" do
     @mactts.voice = :beef
-    lambda{ @mactts.speak(@sample_text) }.should raise_error(Mac::TTS::InvalidVoiceException)
+    lambda{ @mactts.say(@sample_text) }.should raise_error(Mac::TTS::InvalidVoiceException)
   end
   
   it "should raise an error when an invalid command is specified" do
     @mactts.voice = :fred
     @mactts.say_command = '/should/not/exist'
-    lambda{ @mactts.speak(@sample_text) }.should raise_error(Mac::TTS::SayCommandNotFoundException)
+    lambda{ @mactts.say(@sample_text) }.should raise_error(Mac::TTS::SayCommandNotFoundException)
   end
   
   it "should return false if a valid command that is not say is specified" do
     @mactts.say_command = '/usr/bin/env'
-    @mactts.speak(@sample_text).should == false
+    @mactts.say(@sample_text).should == false
   end
 end

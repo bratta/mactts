@@ -41,7 +41,7 @@ module Mac
     #   Mac::TTS.say('This is my text!', :alex)
     def self.say(text, voice = :fred)
       mactts = TTS.new(:voice => voice)
-      mactts.speak(text)
+      mactts.say(text)
     end
   
     # Use TTS to speak your text, with the voice specified
@@ -49,8 +49,8 @@ module Mac
     #
     # Usage:
     #    mactts = Mac::TTS.new
-    #    mactts.speak('This is my text!')
-    def speak(text)
+    #    mactts.say('This is my text!')
+    def say(text)
       check_for_command
       validate_voice
       perform_say(text, @voice)

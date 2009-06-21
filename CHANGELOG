@@ -1,5 +1,9 @@
 = Mac::TTS Changelog
 
+== 0.1.2 7/21/2009
+
+Consistent method names between class and instance methods for say()
+
 == 0.1.0 7/21/2009
 
 Initial release
