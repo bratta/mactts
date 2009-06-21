@@ -1,0 +1,10 @@
+CHANGELOG
+lib/mactts.rb
+LICENSE
+mactts.gemspec
+Manifest
+Rakefile
+README.rdoc
+spec/mactts_spec.rb
+spec/spec_helper.rb
+tasks/rspec.rake

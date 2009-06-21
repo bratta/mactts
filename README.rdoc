@@ -1,0 +1,67 @@
+= Mac::TTS
+
+Gem for piping text from Ruby to the Mac OS X say command.
+
+
+== Install
+
+  gem install bratta-mactts --source http://gems.github.com
+
+
+== Usage
+
+There are two main ways to use this gem. On your system, say you have
+the sane defaults for the say command (i.e. the say command is in /usr/bin/say
+and you don't care about the name of the tempfile). Then you can call the
+class method "say" to speak what you want with the voice you want:
+
+  Mac::TTS.say('This is my text!')
+  
+The default is to use the voice 'Fred'. If you want to use a different voice,
+then pass a symbolized version of the voice to the command:
+
+  Mac::TTS.say('This is my text!', :alex)
+  
+A list of valid voices is in the valid_voices class method:
+
+  puts Mac::TTS.valid_voices
+
+With the power of Ruby, you can utilize here-docs to make some neat looking code
+and speak a large amount of text:
+
+  Mac::TTS.say(<<-EOT, :alex)
+    This is a test. This is only a test.
+    If this were an actual emergency, I'd be screaming my head off.
+  EOT  
+  
+If you wish to instantiate the object to change the defaults, feel free to
+do so:
+
+  mactts = Mac::TTS.new(:command => '/path/to/say', :tempfile => 'somename', :voice => :deranged)
+  mactts.say('This is my text!')
+  
+Of course, you can always call the accessors for @command, @tempfile, and @voice
+before the say command in order to get what you want.
+
+The "tempfile" option is just the name of the file created when this gem buffers
+the text out to disk with the Tempfile command. The reason it is sent to a text file 
+is so that we can utilize large amounts of text and not have to worry about special 
+characters like we would if we just passed it directly to the command line.
+
+
+== License
+
+Copyright (c) 2009 Tim Gourley
+ 
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
