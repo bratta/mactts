@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.description = %q{Ruby wrapper around the Mac OS X say command}
   s.email = %q{tgourley@gmail.com}
   s.extra_rdoc_files = ["CHANGELOG", "lib/mactts.rb", "LICENSE", "README.rdoc", "tasks/rspec.rake"]
-  s.files = ["CHANGELOG", "lib/mactts.rb", "LICENSE", "Manifest", "pkg/mactts-0.1.0/CHANGELOG", "pkg/mactts-0.1.0/lib/mactts.rb", "pkg/mactts-0.1.0/LICENSE", "pkg/mactts-0.1.0/mactts.gemspec", "pkg/mactts-0.1.0/Manifest", "pkg/mactts-0.1.0/Rakefile", "pkg/mactts-0.1.0/README.rdoc", "pkg/mactts-0.1.0/spec/mactts_spec.rb", "pkg/mactts-0.1.0/spec/spec_helper.rb", "pkg/mactts-0.1.0/tasks/rspec.rake", "pkg/mactts-0.1.0.gem", "pkg/mactts-0.1.0.tar.gz", "Rakefile", "README.rdoc", "spec/mactts_spec.rb", "spec/spec_helper.rb", "tasks/rspec.rake", "mactts.gemspec"]
+  s.files = ["CHANGELOG", "lib/mactts.rb", "LICENSE", "mactts.gemspec", "Manifest", "Rakefile", "README.rdoc", "spec/mactts_spec.rb", "spec/spec_helper.rb", "tasks/rspec.rake"]
   s.has_rdoc = true
   s.homepage = %q{http://github.com/bratta/mactts}
   s.rdoc_options = ["--line-numbers", "--inline-source", "--title", "Mactts", "--main", "README.rdoc"]
