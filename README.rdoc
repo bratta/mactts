@@ -4,9 +4,12 @@ Gem for piping text from Ruby to the Mac OS X say command.
 
 
 == Install
+  
+  # If you haven't done so yet
+  gem install gemcutter
+  gem tumble
 
-  gem install bratta-mactts --source http://gems.github.com
-
+  gem install mactts
 
 == Usage
 
